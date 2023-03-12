@@ -43,11 +43,7 @@ form.addEventListener("submit", function (event) {
   });
 
   const horario = document.getElementById("horario").value;
-  // Constrói a mensagem de texto
-  const texto = `Olá, meu nome é ${nome}.
-               Gostaria de agendar um(a) ${procedimento} para o seguinte dia e horário:
-               Data: ${data}
-               Horário: ${horario}.`;
+  const texto = `Olá, meu nome é ${nome}. Gostaria de agendar um(a) ${procedimento} para o dia ${dataFormatada} às ${horario}.`;
 
   const api = `https://api.whatsapp.com/send?phone=5561986727887&text=${encodeURIComponent(
     texto

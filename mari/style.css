@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0%;
+}
+header {
+  width: auto;
+  height: 70px;
+  background-color: #e1e1e1;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+  font-family: "Italiana";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 80%;
+  color: #1e1e1e;
+}
+.titulo2 {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 33px;
+  line-height: 36px;
+  text-align: center;
+  padding: 8% 5% 0% 6%;
+  color: #1e1e1e;
+  background-color: #f1f1f1;
+  margin-top: 1px;
+}
+.titulo2 strong {
+  color: #f19a3e;
+  font-weight: 300;
+}
+.paragrafo1 {
+  margin-top: -2%;
+  text-align: center;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #000000;
+}
+.lista1 li:before {
+  content: "-  ";
+  color: #f19a3e;
+  font-weight: bolder;
+  font-size: larger;
+}
+.lista1 {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 5%;
+}
+.lista1 li {
+  list-style: none;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 13px;
+  color: #bebebe;
+  padding: 5px;
+}
+.section1 {
+  background-color: #f1f1f1;
+  margin: auto 0;
+}
+.imagemfemea {
+  max-width: 80%;
+  margin-left: 13%;
+}
+.section2 {
+  background-color: #f0ebe4;
+}
+.section2 h2 {
+  padding-top: 10%;
+  margin-top: 0;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 43px;
+  text-align: center;
+  color: #1e1e1e;
+}
+.section2 p {
+  margin-top: -3%;
+  text-align: center;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #f19a3e;
+}
+.glide__slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  text-align: center;
+  font-size: 30px;
+}
+.glide__slide img {
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+}
+.glide__bullets {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+}
+.glide__bullets button {
+  background: #fff;
+  border: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.glide__bullets button.active {
+  background: #333;
+}
+.descricao {
+  margin-top: 10px;
+  font-family: "Italiana";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  margin-left: -15;
+}
+
+#formulario {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Estilo do botão */
+button {
+  margin-left: 27%;
+  background-color: #f19a3e;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Playfair Display";
+  margin-bottom: 20px;
+  border-radius: 3000px;
+}
+
+/* Estilo do formulário */
+form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo dos labels */
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Estilo dos inputs */
+form input[type="text"],
+form input[type="date"],
+form input[type="time"],
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Estilo do botão de fechar */
+#fechar {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #d17373;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 15px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  border-radius: 2px;
+}
+
+/* Estilo do botão de enviar */
+input[type="submit"] {
+  background-color: #cfc37f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}

@@ -30,20 +30,26 @@ new Glide(".glide", {
 const form = document.getElementById("formulario");
 
 form.addEventListener("submit", function (event) {
-  // Impede o envio do formulário
   event.preventDefault();
 
-  // Captura os dados do formulário
   const nome = document.getElementById("nome").value;
   const procedimento = document.getElementById("procedimento").value;
-  const data = document.getElementById("data").value;
+
+  const data = new Date(document.getElementById("data").value);
+  const dataFormatada = data.toLocaleDateString("pt-BR", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  });
+
   const horario = document.getElementById("horario").value;
-
   // Constrói a mensagem de texto
-  const texto = `Olá, meu nome é ${nome}. Gostaria de agendar um(a) ${procedimento} para o dia ${data} às ${horario}.`;
+  const texto = `Olá, meu nome é ${nome}.
+               Gostaria de agendar um(a) ${procedimento} para o seguinte dia e horário:
+               Data: ${data}
+               Horário: ${horario}.`;
 
-  // Redireciona para a API do WhatsApp com a mensagem de texto
-  const api = `https://api.whatsapp.com/send?phone=5561986727887&text=Quero%20saber%20mais%20informa%C3%A7%C3%B5es${encodeURIComponent(
+  const api = `https://api.whatsapp.com/send?phone=5561986727887&text=${encodeURIComponent(
     texto
   )}`;
   window.location.href = api;

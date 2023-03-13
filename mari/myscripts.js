@@ -50,3 +50,13 @@ form.addEventListener("submit", function (event) {
   )}`;
   window.location.href = api;
 });
+const dataInput = document.getElementById("data");
+
+// Adiciona as barras ao inserir a data
+dataInput.addEventListener("input", function (event) {
+  let value = event.target.value;
+  value = value.replace(/\D/g, ""); // remove todos os caracteres não numéricos
+  value = value.replace(/(\d{2})(\d)/, "$1/$2"); // adiciona a primeira barra
+  value = value.replace(/(\d{2})(\d)/, "$1/$2"); // adiciona a segunda barra
+  event.target.value = value;
+});

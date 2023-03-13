@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-Br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -99,6 +99,7 @@
           id="nome"
           name="nome"
           pattern="[A-Za-zÀ-ÿ\s]+"
+          placeholder="Seu nome aqui"
           title="Por favor, insira apenas letras e espaços."
           required
         /><br />
@@ -114,13 +115,15 @@
 
         <label for="data">Data:</label>
         <input
-          type="date"
+          type="text"
           id="data"
           name="data"
-          min="2023-01-01"
-          max="2024-12-31"
+          pattern="\d{2}/\d{2}/\d{4}"
           required
-        /><br />
+          placeholder="DD/MM/AAAA"
+          maxlength="10"
+          minlength="8"
+        />
 
         <label for="horario">Horário:</label>
         <input type="time" id="horario" name="horario" /><br />

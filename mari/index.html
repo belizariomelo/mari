@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="hamburquer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.theme.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Najuh</h1>
+      <div class="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav>
+        <ul>
+          <li class="hamburguer"><a href="#">Início</a></li>
+          <li class="hamburguer"><a href="#">Sobre Nós</a></li>
+          <li class="hamburguer"><a href="#">Serviços</a></li>
+          <li class="hamburguer"><a href="#">Agendar Atendimento</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="section1">
+      <h2 class="titulo2">
+        Melhoramos o seu dia através da sua <strong>autoestima</strong>
+      </h2>
+      <div>
+        <p class="paragrafo1">
+          Temos tudo o que você precisa para se sentir bem e feliz com a sua
+          aparência.
+        </p>
+      </div>
+      <ul class="lista1">
+        <li>
+          Najuh é um estúdio de beleza e estética focado no bem estar de seus
+          clientes
+        </li>
+        <li>
+          Profissionais especializados e prontos para os cuidados que você
+          merece
+        </li>
+        <li>Trabalhamos com os melhores produtos do mercado</li>
+      </ul>
+      <img class="imagemfemea" src="ritz-home-background (1).png" alt="" />
+    </section>
+    <section class="section2">
+      <div>
+        <h2>Contamos com uma variedade de serviços</h2>
+        <p>NOSSOS SERVIÇOS</p>
+      </div>
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img src="tratamento-facial.png" alt="limpeza de pele" />
+              <div class="descricao">Limpeza de pele</div>
+            </li>
+            <li class="glide__slide">
+              <img
+                src="Jato-de-plasma-tudobelo-estetica-opt-1.png"
+                alt="catery"
+              />
+              <div class="descricao">Cautery-Pen</div>
+            </li>
+            <li class="glide__slide">
+              <img
+                src="10-beneficios-da-massagem-relaxante-para-a-saude-1649698622.png"
+                alt="massagem"
+              />
+              <div class="descricao">Massagem Relaxante</div>
+            </li>
+            <li class="glide__slide">
+              <img src="cilios3.png" alt="lash-lifting" />
+              <div class="descricao">Lash-Lifting</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button onclick="abrirFormulario()">Agende seu horário</button>
+
+      <form id="formulario">
+        <button id="fechar" onclick="fecharFormulario(event)">X</button>
+        <label for="nome">Nome:</label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          pattern="[A-Za-zÀ-ÿ\s]+"
+          placeholder="Seu nome aqui"
+          title="Por favor, insira apenas letras e espaços."
+          required
+        /><br />
+
+        <label for="procedimento">Procedimento:</label>
+        <select id="procedimento" name="procedimento" required>
+          <option value="" disabled selected>Selecione um serviço</option>
+          <option value="cautery-pen">Cautery Pen</option>
+          <option value="lash-lifting">Lash Lifting</option>
+          <option value="massagem-relaxante">Massagem Relaxante</option>
+          <option value="limpeza-de-pele">Limpeza de Pele</option>
+        </select>
+
+        <label for="data">Data:</label>
+        <input
+          type="text"
+          id="data"
+          name="data"
+          pattern="\d{2}/\d{2}/\d{4}"
+          required
+          placeholder="DD/MM/AAAA"
+          maxlength="10"
+        />
+
+        <label for="horario">Horário:</label>
+        <input type="time" id="horario" name="horario" /><br />
+        <input type="submit" value="Enviar" />
+      </form>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="myscripts.js"></script>
+    <footer>
+      <br />
+      <h2 class="najuhfooter">Najuh Beleza & Estética</h2>
+      <div class="sociais">
+        <img class="imgs" src="instagram (1).png" alt="instagram-" />
+        <img class="imgs" src="whatsapp (1).png" alt="whatsapp" />
+      </div>
+      <div class="footer1">
+        <div class="contact">
+          <h3>Contato</h3>
+          <p>(61)9982082088</p>
+        </div>
+        <div class="hours">
+          <h2>Horário de funcionamento</h2>
+          <p>Segunda à sábado</p>
+
+          <p>10h às 17h</p>
+        </div>
+      </div>
+      <a class="topo"
+        >Ir para o topo &nbsp; &nbsp; &nbsp;
+        <strong class="strongs">⇧</strong></a
+      >
+      <p class="copy">&copy; 2023, Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>

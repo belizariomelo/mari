@@ -7,6 +7,8 @@ body {
   width: 100%;
   box-sizing: border-box;
   margin: 0%;
+     scroll-behavior: smooth;
+
 }
 header {
   width: auto;
@@ -319,6 +321,7 @@ footer {
 .topo {
   font-family: "Playfair Display";
   font-style: normal;
+  text-decoration: none;
   font-weight: 400;
   font-size: 0.9rem;
   line-height: 38px;
@@ -332,6 +335,7 @@ footer {
   margin-right: auto;
   width: 40%;
   border-radius: 10px;
+  z-index: 999;
 }
 .strongs {
   font-weight: 300;

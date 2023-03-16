@@ -27,6 +27,9 @@ new Glide(".glide", {
   },
   animationDuration: 500,
 }).mount();
+const regexHorario = /^([01]\d|2[0-3]):([0-5]\d)$/;
+const regexNome = /^[a-zA-ZÀ-ú]+([a-zA-ZÀ-ú ]*[a-zA-ZÀ-ú]+)*$/;
+
 const form = document.getElementById("formulario");
 
 form.addEventListener("submit", function (event) {
@@ -35,21 +38,31 @@ form.addEventListener("submit", function (event) {
   const nome = document.getElementById("nome").value;
   const procedimento = document.getElementById("procedimento").value;
 
-  const data = new Date(document.getElementById("data").value);
-  const dataFormatada = data.toLocaleDateString("pt-BR", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-  });
+  const dataInput = document.getElementById("data");
+  const dataValue = dataInput.value;
+  const dataParts = dataValue.split("/");
+  const dataIso8601 = `${dataParts[2]}-${dataParts[1]}-${dataParts[0]}`;
 
   const horario = document.getElementById("horario").value;
-  const texto = `Olá, meu nome é ${nome}. Gostaria de agendar um(a) ${procedimento} para o dia ${dataFormatada} às ${horario}.`;
+  
+  if (!regexNome.test(nome)) {
+    alert("Nome inválido. Por favor, verifique e tente novamente.");
+    return;
+  }
+
+  if (!regexHorario.test(horario)) {
+    alert("Horário inválido. Por favor, verifique e tente novamente.");
+    return;
+  }
+
+  const texto = `Olá, meu nome é ${nome}. Gostaria de agendar um(a) ${procedimento} para o dia ${dataValue} às ${horario}.`;
 
   const api = `https://api.whatsapp.com/send?phone=5561986727887&text=${encodeURIComponent(
     texto
   )}`;
   window.location.href = api;
 });
+
 const dataInput = document.getElementById("data");
 
 // Adiciona as barras ao inserir a data

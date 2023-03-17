@@ -69,3 +69,7 @@ dataInput.addEventListener("input", function (event) {
   value = value.replace(/(\d{2})(\d)/, "$1/$2"); // adiciona a segunda barra
   event.target.value = value;
 });
+const horarioInput = document.getElementById("horario");
+horarioInput.oninvalid = function() {
+  horarioInput.setCustomValidity("Por favor, insira um horário entre 10:00 e 16:00");
+};

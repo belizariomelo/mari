@@ -128,7 +128,7 @@
           required
           placeholder="DD/MM/AAAA"
           maxlength="10"
-          oninvalid="setCustomValidity('Por favor, insira um horário entre 10:00 e 16:00')"
+         
         />
 
         <label for="horario">Horário:</label>
@@ -139,6 +139,7 @@
           required
           min="10:00"
           max="16:00"
+          oninvalid="setCustomValidity('Por favor, insira um horário entre 10:00 e 16:00')"
         /><br />
         <input type="submit" value="Enviar" />
       </form>

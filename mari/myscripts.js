@@ -14,6 +14,17 @@ menuToggle.addEventListener("click", function () {
   menuToggle.classList.toggle("open");
   nav.classList.toggle("open");
 });
+
+// fechar o menu hamburguer quando um link é clicado
+var links = document.querySelectorAll("nav ul li a");
+
+links.forEach(function (link) {
+  link.addEventListener("click", function () {
+    menuToggle.classList.remove("open");
+    nav.classList.remove("open");
+  });
+});
+
 new Glide(".glide", {
   type: "carousel",
   perView: 1,
@@ -58,6 +69,7 @@ form.addEventListener("submit", function (event) {
   )}`;
   window.location.href = api;
 });
+
 
 const dataInput = document.getElementById("data");
 

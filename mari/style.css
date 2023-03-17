@@ -7,8 +7,7 @@ body {
   width: 100%;
   box-sizing: border-box;
   margin: 0%;
-     scroll-behavior: smooth;
-
+  scroll-behavior: smooth;
 }
 header {
   width: auto;
@@ -291,7 +290,7 @@ footer {
   font-style: normal;
   font-weight: 400;
   font-size: 0.7rem;
-  line-height: 13px;
+  line-height: 6px;
   color: #f0ebe4;
 }
 .hours h2 {
@@ -351,11 +350,22 @@ footer {
   display: flex;
   justify-content: center;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 320px) {
   #fechar {
     position: absolute;
     top: -16px;
     right: 1.5px;
+  }
+  button {
+    margin-left: 24.5%;
+  }
+  .topo {
+    width: 50%;
+  }
+  .glide__slide img {
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
   }
   @media screen and (min-width: 420px) and (max-width: 1020px) {
     #fechar {

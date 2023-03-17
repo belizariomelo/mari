@@ -26,14 +26,15 @@
       </div>
       <nav>
         <ul>
-          <li class="hamburguer"><a href="#">Início</a></li>
-          <li class="hamburguer"><a href="#">Sobre Nós</a></li>
-          <li class="hamburguer"><a href="#">Serviços</a></li>
-          <li class="hamburguer"><a href="#">Agendar Atendimento</a></li>
+          <li class="hamburguer"><a href="#sobre-nos">Sobre Nós</a></li>
+          <li class="hamburguer"><a href="#servicos">Serviços</a></li>
+          <li class="hamburguer">
+            <a href="#agendar-atendimento">Agendar Atendimento</a>
+          </li>
         </ul>
       </nav>
     </header>
-    <section class="section1">
+    <section id="sobre-nos" class="section1">
       <h2 class="titulo2">
         Melhoramos o seu dia através da sua <strong>autoestima</strong>
       </h2>
@@ -56,7 +57,7 @@
       </ul>
       <img class="imagemfemea" src="ritz-home-background (1).png" alt="" />
     </section>
-    <section class="section2">
+    <section id="servicos" class="section2">
       <div>
         <h2>Contamos com uma variedade de serviços</h2>
         <p>NOSSOS SERVIÇOS</p>
@@ -89,10 +90,15 @@
           </ul>
         </div>
       </div>
-      <button onclick="abrirFormulario()">Agende seu horário</button>
+      <button id="agendar-atendimento" onclick="abrirFormulario()">
+        Agende seu horário
+      </button>
 
       <form id="formulario">
-        <button id="fechar" onclick="fecharFormulario(event)">X</button>
+        <button type="button" id="fechar" onclick="fecharFormulario(event)">
+          X
+        </button>
+
         <label for="nome">Nome:</label>
         <input
           type="text"
@@ -125,7 +131,14 @@
         />
 
         <label for="horario">Horário:</label>
-        <input type="time" id="horario" name="horario"  required min="9:00" max="17:00"/><br />
+        <input
+          type="time"
+          id="horario"
+          name="horario"
+          required
+          min="10:00"
+          max="16:00"
+        /><br />
         <input type="submit" value="Enviar" />
       </form>
     </section>
@@ -135,27 +148,39 @@
       <br />
       <h2 class="najuhfooter">Najuh Beleza & Estética</h2>
       <div class="sociais">
-        <a href="https://www.instagram.com/seu_instagram" target="_blank">
+        <a
+          href="https://www.instagram.com/najuh.cuidese/"
+          target="_blank"
+          rel="noopener"
+        >
           <img class="imgs" src="instagram (1).png" alt="instagram" />
         </a>
-        <a href="https://wa.me/seu_numero" target="_blank">
-          <img class="imgs" src="whatsapp (1).png" alt="whatsapp"/>
+        <a
+          href="https://api.whatsapp.com/send?phone=5561986727887&text= Olá gostária de saber mais informações sobre os procedimentos."
+          target="_blank"
+          rel="noopener"
+        >
+          <img class="imgs" src="whatsapp (1).png" alt="whatsapp" />
         </a>
       </div>
-      
+
       <div class="footer1">
         <div class="contact">
           <h3>Contato</h3>
-          <p>(61)9982082088</p>
+          <p>(61) 986727887</p>
         </div>
         <div class="hours">
           <h2>Horário de funcionamento</h2>
           <p>Segunda à sábado</p>
 
-          <p>10h às 17h</p>
+          <p>10h às 16h</p>
         </div>
       </div>
-      <a class="topo" href="#" role="button">Ir para o topo &nbsp; &nbsp; &nbsp;<strong class="strongs">⇧</strong></a>
+      <a class="topo" href="#" role="button"
+        >Ir para o topo &nbsp; &nbsp; &nbsp;<strong class="strongs"
+          >⇧</strong
+        ></a
+      >
       <p class="copy">&copy; 2023, Todos os direitos reservados.</p>
     </footer>
   </body>

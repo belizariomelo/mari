@@ -28,7 +28,7 @@ new Glide(".glide", {
   animationDuration: 500,
 }).mount();
 const regexHorario = /^([01]\d|2[0-3]):([0-5]\d)$/;
-const regexNome = /^[a-zA-ZÀ-ú]+([a-zA-ZÀ-ú ]*[a-zA-ZÀ-ú]+)*$/;
+
 
 const form = document.getElementById("formulario");
 
@@ -45,13 +45,9 @@ form.addEventListener("submit", function (event) {
 
   const horario = document.getElementById("horario").value;
   
-  if (!regexNome.test(nome)) {
-    alert("Nome inválido. Por favor, verifique e tente novamente.");
-    return;
-  }
+
 
   if (!regexHorario.test(horario)) {
-    alert("Horário inválido. Por favor, verifique e tente novamente.");
     return;
   }
 

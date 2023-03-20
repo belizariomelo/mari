@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 html,
 body {
@@ -10,15 +11,9 @@ body {
   margin: 0%;
   scroll-behavior: smooth;
 }
-header {
-  width: auto;
-  height: 70px;
-  background-color: #f1f1f1;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
+
+
+
 h1 {
   text-align: center;
   font-family: "Italiana";
@@ -554,7 +549,13 @@ footer {
     border-radius: 10px;
   }
 }
-@media screen and (min-width: 420px) and (max-width: 1020px) {
+@media screen and (min-width: 300px) and (max-width: 780px) {
+  .glide__slide img {
+    width: 275px;
+    height: 200px;
+    border-radius: 10px;
+    
+  }
   header {
     width: auto;
     height: 70px;
@@ -565,3 +566,55 @@ footer {
     justify-content: center;
   }
 }
+
+  @media screen and (min-width: 780px) {
+  header{
+    width: auto;
+    height: 70px;
+    background-color: #f1f1f1;
+    display:flex;
+    
+  }
+  nav{
+    width: 48%;
+  }
+  nav ul{
+    width: 110%;
+    padding-left: 20%;
+  }
+    nav ul li{
+      display: flex;
+      justify-content:center;
+      margin-right: 5px;
+    
+    }
+    nav ul li a{
+      color: #1E1E1E;
+      font-family: 'Inter'sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      
+    }
+    .tt{
+      display: flex;
+      width: 50%;
+    }
+  .titulo2{
+font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 500;
+font-size: 2.7rem;
+line-height: 114%;
+color: #1E1E1E;
+  }
+  .paragrafo1{
+    font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 500;
+font-size: 1rem;
+line-height: 21px;
+color: #1E1E1E;
+  }
+ }

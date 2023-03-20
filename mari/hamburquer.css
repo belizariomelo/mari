@@ -58,7 +58,7 @@ nav ul {
     margin: 10px 0;
   }
   nav ul li a {
-    font-family: "Playfair Display";
+    font-family: 'Inter', sans-serif;
     font-size: 1.5rem;
     text-decoration: none;
     color: #1e1e1e;
@@ -82,7 +82,7 @@ nav ul {
     padding: 10px;
   }
   .hamburguer a {
-    font-family: "Playfair Display";
+    font-family: 'Inter', sans-serif;
     text-decoration: none;
     text-align: end;
   }
